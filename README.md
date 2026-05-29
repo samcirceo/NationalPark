@@ -1,4 +1,4 @@
-# NationalPark
+# National Park Crowd Predictor
 
 <p align="center">
   <img src="images/teton.JPG" width="700"/>
