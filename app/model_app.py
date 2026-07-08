@@ -23,7 +23,7 @@ def load_assets():
 modelPipeline, labels, lookup_df = load_assets()
 
 st.title("National Park Crowd Predictor")
-st.write("Predict 2026 crowd levels across 63 U.S. National Parks using historical visitation, weather, wildfire activity, and Google Search Trends.")
+st.write("Predict 2026 crowd levels across 63 U.S. National Parks using historical visitation, weather, wildfire activity, and Google Search Trends. Pick a National Park and month to travel in the dropdowns below:")
 
 
 
@@ -98,7 +98,7 @@ layer = pdk.Layer("ScatterplotLayer",map_df,get_position=["longitude", "latitude
 
 #change starting viewpoint of map (centered on the chosen park)
 selectedparkrow = map_df[map_df['UnitCode']== selected_park].iloc[0]
-view_state = pdk.ViewState(latitude=selectedparkrow["latitude"],longitude=selectedparkrow["longitude"],zoom=4, pitch=0)
+view_state = pdk.ViewState(latitude=selectedparkrow["latitude"],longitude=selectedparkrow["longitude"],zoom=5, pitch=0)
 
 # add tooltip of other parks crowd level
 st.pydeck_chart(pdk.Deck(layers=[layer],initial_view_state=view_state,map_style="", tooltip={"html": "<b>Park:</b> {park_name}<br/><b>Status Tier:</b> {Tier_Name}"}))
@@ -160,6 +160,7 @@ with st.sidebar:
     st.markdown(f"""<div <div style="font-size: 28px; font-weight: bold; color: {tier_color}; font-family: sans-serif;">
         {current_tier} Crowds </div>""", unsafe_allow_html=True)
     st.metric(label="Prediction Confidence", value=f"{confidencenum}%")
+    st.markdown("---")
 
     #Print Historical Weather trends for that month/park
     st.subheader(f"""Historical Weather for {month_lbls[selected_month]} """)
