@@ -1,9 +1,9 @@
 # National Park Crowd & Traffic Optimization Dashboard
 <p align="center"> 
-I took this photo at Grand Teton National Park in August 2020. [Deployed app](https://nationalparkcrowdpredictor.streamlit.app/model_app) 
+I took this photo at Grand Teton National Park in August 2020. 
 </p>
 
-
+Visit my [Deployed app](https://nationalparkcrowdpredictor.streamlit.app/model_app) demo
 
 <p align="center">
   <img src="images/teton.JPG" width="400"/>
