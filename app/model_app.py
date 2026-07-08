@@ -4,8 +4,6 @@
 # =========================================================================================
 
 
-
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -25,6 +23,7 @@ def load_assets():
 modelPipeline, labels, lookup_df = load_assets()
 
 st.title("National Park Crowd Predictor")
+st.write("Predict 2026 crowd levels across 63 U.S. National Parks using historical visitation, weather, wildfire activity, and Google Search Trends.")
 
 
 
@@ -105,8 +104,35 @@ view_state = pdk.ViewState(latitude=selectedparkrow["latitude"],longitude=select
 st.pydeck_chart(pdk.Deck(layers=[layer],initial_view_state=view_state,map_style="", tooltip={"html": "<b>Park:</b> {park_name}<br/><b>Status Tier:</b> {Tier_Name}"}))
 
 #Legend
-st.write("Each dot depicts each parks crowd levels:")
-st.write("🟢 Low &nbsp;&nbsp;&nbsp;&nbsp; 🟡 Medium &nbsp;&nbsp;&nbsp;&nbsp; 🟠 High &nbsp;&nbsp;&nbsp;&nbsp; 🔴 Extreme")
+st.write("Each dot represents a park's predicted crowd level based on its **historical monthly visitation percentiles**.")
+
+st.write(
+    "🟢 Low (0–25th percentile) &nbsp;&nbsp;&nbsp;"
+    "🟡 Medium (25th–65th percentile) &nbsp;&nbsp;&nbsp;"
+    "🟠 High (65th–90th percentile) &nbsp;&nbsp;&nbsp;"
+    "🔴 Extreme (90th–100th percentile)",
+    unsafe_allow_html=True
+)
+
+with st.expander("About the Model"):
+    st.markdown("""
+    **Algorithm:** XGBoost Classifier
+
+    **Purpose:** Predicts monthly crowd levels (Low, Medium, High, or Extreme) for all 63 U.S. National Parks.
+
+    **Features Used**
+    - Historical visitation patterns
+    - Weather
+    - Wildfire activity
+    - Google Search Trends
+
+    **How Predictions Are Classified**
+    Crowd levels are based on **each park's historical monthly visitation percentiles**, not absolute visitor counts. This allows parks of different sizes to be compared relative to their own visitation history.
+
+    **Coverage**
+    - 63 U.S. National Parks
+    - Monthly predictions for 2026
+    """)
 
 
 # =====================================================================================================
@@ -137,17 +163,19 @@ with st.sidebar:
 
     #Print Historical Weather trends for that month/park
     st.subheader(f"""Historical Weather for {month_lbls[selected_month]} """)
-    st.write(f"Average Rainfall (past 3 months): **{park_record['rain_roll_mean_3']:.1f} in**")
-    st.write(f"Average Snowfall (past 3 months): **{park_record['snow_roll_mean_3']:.1f} in**")
+    st.write(f"Average Monthly Rainfall: **{park_record['rain_roll_mean_3']:.1f} in**")
+    st.write(f"Average Monthly Snowfall: **{park_record['snow_roll_mean_3']:.1f} in**")
     st.write(f"Estimated Max Temp: **{park_record['temp_max']:.0f}°F**")
     st.write(f"Estimated Min Temp: **{park_record['temp_min']:.0f}°F**")
     st.write(f"Estimated # Nearby Fires: **{park_record['firecountavg']:.0f}**")
     st.markdown("---")
 
+    parkname = park_dict[selected_park]
+
     #if park is high or extreme give better months to travel
     st.subheader("Travel Optimization Engine")
     if park_tier >= 2: 
-        st.error(f"⚠️ {selected_park} is projected to experience heavy congestion in {month_lbls[selected_month]}.")
+        st.error(f"⚠️ {parkname} is projected to experience heavy congestion in {month_lbls[selected_month]}.")
         st.write("##### Better Times to Travel:")
 
         alternatives = []
@@ -167,7 +195,7 @@ with st.sidebar:
     
     #if park is low or medium
     else:
-        st.success(f"✅ {month_lbls[selected_month]} is a wonderful choice for {selected_park}.")
+        st.success(f"✅ {month_lbls[selected_month]} is a wonderful choice for {parkname}.")
 
 
 
