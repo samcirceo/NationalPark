@@ -18,9 +18,9 @@ import pydeck as pdk
 
 @st.cache_resource
 def load_assets():
-    modelPipeline = joblib.load("finalModelJun26.joblib")
-    labels = joblib.load("crowd_tier_bins.joblib") 
-    lookup_df = pd.read_csv("park_lookup_data.csv")
+    modelPipeline = joblib.load("app/finalModelJun26.joblib")
+    labels = joblib.load("app/crowd_tier_bins.joblib") 
+    lookup_df = pd.read_csv("app/park_lookup_data.csv")
     return modelPipeline, labels, lookup_df
 modelPipeline, labels, lookup_df = load_assets()
 

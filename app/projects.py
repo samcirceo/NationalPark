@@ -21,7 +21,7 @@ with col1:
     st.image(load_and_resize("images/teton.JPG"), use_container_width=False)
     st.subheader("National Park Crowd Predictor")
     st.write("End to End ML models predicting crowd level at the 63 US National Parks.")
-    st.page_link("model_app.py", label="Launch Live App", icon="🚀")
+    st.page_link("app/model_app.py", label="Launch Live App", icon="🚀")
 
 with col2:
     st.image(load_and_resize("images/mushroom.png"), use_container_width=False)

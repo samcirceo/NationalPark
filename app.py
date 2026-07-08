@@ -96,10 +96,10 @@ class DropColumnsTransformer(BaseEstimator, TransformerMixin):
 st.set_page_config(page_title="Professional Portfolio & Predictor", layout="wide")
 
 # 1. Define the pages pointing to your view files
-bio_page = st.Page("bio.py", title="Homepage", icon="👤", default=True)
-resume_page = st.Page("resume.py", title="Resume", icon="📄")
-projects_page = st.Page("projects.py", title="Data Projects", icon="📂")
-model_page = st.Page("model_app.py", title="National Park Crowd Predictor", icon="🌲")
+bio_page = st.Page("app/bio.py", title="Homepage", icon="👤", default=True)
+resume_page = st.Page("app/resume.py", title="Resume", icon="📄")
+projects_page = st.Page("app/projects.py", title="Data Projects", icon="📂")
+model_page = st.Page("app/model_app.py", title="National Park Crowd Predictor", icon="🌲")
 
 # 2. Build the navigation routing system
 nav = st.navigation({"Navigation": [bio_page, resume_page, projects_page,model_page] })
