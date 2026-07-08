@@ -1,8 +1,9 @@
 # National Park Crowd & Traffic Optimization Dashboard
-<p align="center">
-  This project is in progress and will be complete July 2026. 
-I took this photo at Grand Teton National Park in August 2020. 
+<p align="center"> 
+I took this photo at Grand Teton National Park in August 2020. [Deployed app](https://nationalparkcrowdpredictor.streamlit.app/model_app) 
 </p>
+
+
 
 <p align="center">
   <img src="images/teton.JPG" width="400"/>
