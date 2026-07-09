@@ -1,5 +1,5 @@
 
-
+*.mp4
 venv/
 .DS_Store
 data/Fire2001_2025_756779.csv
