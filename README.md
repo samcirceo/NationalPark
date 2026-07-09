@@ -47,6 +47,8 @@ This project builds a machine learning classification model that predicts monthl
 
 The final dataset combines publicly available data from five major domains:
 
+<div align="center">
+
 | Data Source | Purpose |
 |---|---|
 | National Park Service IRMA | Monthly visitation records and traffic counter data |
@@ -54,6 +56,9 @@ The final dataset combines publicly available data from five major domains:
 | NASA FIRMS | Wildfire activity and intensity |
 | Google Trends via PyTrends | Public interest and search activity |
 | U.S. Energy Information Administration | Regional fuel prices |
+
+</div>
+
 
 All datasets were merged into a master dataframe using: Park ID x Year x Month key
 
