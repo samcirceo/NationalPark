@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4B4B"/>
+      <stop offset="100%" stop-color="#C62828"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Button -->
+  <rect width="320" height="80" rx="20" fill="url(#grad)"/>
+
+  <!-- Streamlit-inspired icon -->
+  <circle cx="40" cy="40" r="14" fill="white"/>
+  <path d="M40 24 L48 40 L40 56 L32 40 Z" fill="#FF4B4B"/>
+
+  <!-- Text -->
+  <text x="70" y="47"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="24"
+        font-weight="700"
+        fill="white">
+    Launch App
+  </text>
+</svg>

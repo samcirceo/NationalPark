@@ -17,11 +17,11 @@
 
 <p align="center">
   <a href="https://nationalparkcrowdpredictor.streamlit.app/">
-    <img src="https://img.shields.io/badge/Launch%20App-Streamlit-red?style=for-the-badge&logo=streamlit&logoColor=white" height="65"/>
+    <img src="images/launchapp.svg" width="220" alt="Launch App">
   </a>
-  &nbsp;&nbsp;&nbsp;
+
   <a href="ProjectNotebook_.ipynb">
-    <img src="https://img.shields.io/badge/View%20Notebook-Jupyter-orange?style=for-the-badge&logo=jupyter&logoColor=white" height="65"/>
+    <img src="images/notebook.svg" width="220" alt="View Notebook">
   </a>
 </p>
 

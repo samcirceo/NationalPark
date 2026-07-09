@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12"/>
+      <stop offset="100%" stop-color="#E67E22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="320" height="80" rx="20" fill="url(#grad2)"/>
+
+  <!-- Notebook icon -->
+  <rect x="28" y="22" width="24" height="36" rx="3" fill="white"/>
+  <line x1="34" y1="30" x2="46" y2="30" stroke="#F39C12" stroke-width="2"/>
+  <line x1="34" y1="38" x2="46" y2="38" stroke="#F39C12" stroke-width="2"/>
+  <line x1="34" y1="46" x2="46" y2="46" stroke="#F39C12" stroke-width="2"/>
+
+  <text x="70" y="47"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="24"
+        font-weight="700"
+        fill="white">
+    View Notebook
+  </text>
+</svg>
