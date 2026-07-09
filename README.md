@@ -4,23 +4,29 @@
 A machine learning dashboard that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
 
 <p align="center">
-  <img src="images/teton.JPG" width="750", height= "350"/>
+  <img src="images/teton.JPG" width="700", height= "300"/>
   <br>
   <em>I took this sunrise photo in Grand Teton National Park in August 2020.</em>
 </p>
 
 
-## Live Demo
+## Project Preview
+Explore the deployed application, review the full analysis notebook, or watch a short walkthrough of the application.
 
-🚀 **Deployed Streamlit Application:**  
-https://nationalparkcrowdpredictor.streamlit.app/
+<p align="center">
+  <a href="https://nationalparkcrowdpredictor.streamlit.app/">
+    <img src="https://img.shields.io/badge/%20Launch%20App-Streamlit-red?style=for-the-badge">
+  </a>
+  &nbsp;
+  <a href="https://github.com/samcirceo/NationalPark">
+    <img src="https://img.shields.io/badge/View%20Notebook-Jupyter-black?style=for-the-badge">
+  </a>
+</p>
 
-📓 **Full Notebook:**  
-[View the Jupyter Notebook](ProjectNotebook_.ipynb)
 
-🎥 **1-minute walkthrough:**
+https://github.com/user-attachments/assets/01ffd0d1-3bf5-4952-9e7d-18c1cf903818
 
-https://github.com/user-attachments/assets/afaf8e80-be7e-4ad0-a382-941d9d61d1ce
+
 
 
 ## The Business Problem
@@ -36,9 +42,7 @@ This project builds a machine learning classification model that predicts monthl
 - High
 - Extreme
 
----
-
-# Data Strategy
+## Data Strategy
 
 The final dataset combines publicly available data from five major domains:
 
@@ -61,19 +65,11 @@ The final dataset contains:
 
 The dataset remains computationally lightweight and can train on a standard laptop while allowing fast deployment through Streamlit.
 
-
-
-
-
-
-
----
-
-# Data Engineering
+## Data Engineering
 
 Combining multiple datasets was one of the largest challenges in this project.
 
-## Wildfire Processing
+### Wildfire Processing
 
 NASA FIRMS contains approximately 3 million wildfire records. To efficiently calculate nearby fire activity, Scikit-Learn's BallTree with the Haversine metric was used.
 
@@ -84,7 +80,7 @@ For each park and month, wildfire features included:
 - Average FRP
 - Maximum FRP
 
-## Weather Processing
+### Weather Processing
 
 Daily weather data was aggregated into monthly summaries:
 
@@ -95,7 +91,7 @@ Daily weather data was aggregated into monthly summaries:
 - Total snowfall
 - Cloud coverage
 
-## Feature Engineering
+### Feature Engineering
 
 Several features were created:
 
