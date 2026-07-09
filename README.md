@@ -395,6 +395,7 @@ When a selected month is predicted to have High or Extreme crowds, the applicati
 
 Potential improvements include:
 
+- Deploy into AWS Elastic Beanstalk
 - Daily crowd forecasting
 - Real-time weather integration
 - Park capacity estimation
