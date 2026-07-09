@@ -1,7 +1,6 @@
 
 # National Park Crowd & Traffic Optimization Dashboard
-
-A machine learning dashboard that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
+A machine learning application that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
 
 <p align="center">
   <img src="images/teton.JPG" width="700", height= "300"/>
@@ -10,20 +9,24 @@ A machine learning dashboard that predicts monthly crowd levels across the 63 U.
 </p>
 
 
+
 ## Project Preview
 Explore the deployed application, review the full analysis notebook, or watch a short walkthrough of the application.
 
+
 <p align="center">
   <a href="https://nationalparkcrowdpredictor.streamlit.app/">
-    <img src="https://img.shields.io/badge/%20Launch%20App-Streamlit-red?style=for-the-badge">
+    <img src="https://img.shields.io/badge/Launch%20App-Streamlit-red?style=for-the-badge&logo=streamlit&logoColor=white" height="45"/>
   </a>
-  &nbsp;
-  <a href="https://github.com/samcirceo/NationalPark">
-    <img src="https://img.shields.io/badge/View%20Notebook-Jupyter-black?style=for-the-badge">
+  &nbsp;&nbsp;&nbsp;
+  <a href="ProjectNotebook_.ipynb">
+    <img src="https://img.shields.io/badge/View%20Notebook-Jupyter-orange?style=for-the-badge&logo=jupyter&logoColor=white" height="45"/>
   </a>
 </p>
 
+
 https://github.com/user-attachments/assets/01ffd0d1-3bf5-4952-9e7d-18c1cf903818
+
 
 
 ## Project Motivation
