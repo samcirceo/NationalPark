@@ -232,31 +232,85 @@ Additional training techniques:
 The primary evaluation metric was Weighted F1-score, which accounts for the natural distribution of crowd tiers. Macro F1-score was also tracked to ensure the model performed well on rare but important events such as Extreme crowd levels.
 
 ### Cross Validation Results (2006 - 2022)
-
-| Model | Weighted F1 | Macro F1 |
-|---|---:|---:|
-| Logistic Regression | .675 | .661 |
-| Random Forest | .689 | .674 |
-| XGBoost | **.692** | **.675** |
-| Baseline | .691 | .675 |
-
 XGBoost achieved the strongest cross-validation performance among the machine learning models. 
 
 After evaluating the strong accuracy of the Baseline model, I strategically decided to add the Baseline Tier directly into the feature
 set. This approach turns the project into an efficient optimization task to use the baseline as a foundation and then use the remaining features to make adjustments and correct the edge cases.
 
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th align="right">Weighted F1</th>
+      <th align="right">Macro F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Logistic Regression</td>
+      <td align="right">.675</td>
+      <td align="right">.661</td>
+    </tr>
+    <tr>
+      <td>Random Forest</td>
+      <td align="right">.689</td>
+      <td align="right">.674</td>
+    </tr>
+    <tr style="background-color: #d4edda; color: #155724;">
+      <td><b>XGBoost</b></td>
+      <td align="right"><b>.692</b></td>
+      <td align="right"><b>.675</b></td>
+    </tr>
+    <tr>
+      <td>Baseline</td>
+      <td align="right">.691</td>
+      <td align="right">.675</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
+
 
 ### Final Test Results (2023-2025)
 
 #### F1 scores
-| Model | Weighted F1 | Macro F1 |
-|---|---:|---:|
-| XGBoost | **.735** | **.731** |
-| Baseline | .731 | .729 |
-
 XGBoost improved upon the baseline while maintaining similar Weighted and Macro F1 scores, indicating balanced performance across all crowd tiers.
 
 Evaluation on the 2023-2025 test set confirms that the model generalized well on unseen data. The improvement from approximately 69% during validation to 73.5% on the final test set demonstrates that XGBoost successfully leveraged additional features beyond historical visitation patterns to improve predictions.
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th align="right">Weighted F1</th>
+      <th align="right">Macro F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #d4edda; color: #155724;">
+      <td><b>XGBoost</b></td>
+      <td align="right"><b>.735</b></td>
+      <td align="right"><b>.731</b></td>
+    </tr>
+    <tr>
+      <td>Baseline</td>
+      <td align="right">.731</td>
+      <td align="right">.729</td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+
+
 
 #### Confusion Matrix
 Although F1 scores are similar between XGBoost and the baseline, confusion matrix analysis reveals the XGBoost model performs way better over the baseline. XGBoost reduced severe prediction errors, particularly cases where extreme crowd periods were incorrectly classified as low or medium demand. This is important because missing high-impact crowd events can directly affect traveler planning and park resource allocation.
