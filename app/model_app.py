@@ -126,8 +126,8 @@ with st.expander("About the Model"):
     - Wildfire activity
     - Google Search Trends
 
-    **How Predictions Are Classified**
-    Crowd levels are based on **each park's historical monthly visitation percentiles**, not absolute visitor counts. This allows parks of different sizes to be compared relative to their own visitation history.
+    **How Predictions Are Classified:**
+    Crowd levels are based on each park's historical monthly visitation percentiles, not absolute visitor counts. This allows parks of different sizes to be compared relative to their own visitation history.
 
     **Coverage**
     - 63 U.S. National Parks
