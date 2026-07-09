@@ -1,25 +1,33 @@
 
 # National Park Crowd & Traffic Optimization Dashboard
 
-A machine learning project that predicts monthly crowd levels across the 63 U.S. National Parks using historical visitation patterns, weather conditions, wildfire activity, economic indicators, and public interest signals.
+A machine learning dashboard that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
 
 <p align="center">
-  <img src="images/teton.JPG" width="400"/>
+  <img src="images/teton.JPG" width="750", height= "350"/>
   <br>
-  <em>I took this sunrise photo of Grand Teton National Park in 2020.</em>
+  <em>I took this sunrise photo in Grand Teton National Park in August 2020.</em>
 </p>
 
-🚀 **View the deployed Streamlit application:**  
+
+## Live Demo
+
+🚀 **Deployed Streamlit Application:**  
 https://nationalparkcrowdpredictor.streamlit.app/
 
-🚀 **View the Notebook file with full code:**
-[Jupyter Notebook](ProjectNotebook_.ipynb) file. 
+📓 **Full Notebook:**  
+[View the Jupyter Notebook](ProjectNotebook_.ipynb)
+
+🎥 **1-minute walkthrough:**
+
+https://github.com/user-attachments/assets/afaf8e80-be7e-4ad0-a382-941d9d61d1ce
 
 
-##  The Business Problem
-As an avid National Park fan, I have experienced first hand how high visitation levels can impact the park experience through 1+ hour entrance station wait times, full campgrounds, and crowded parking lots and congested trails. 
+## The Business Problem
 
-The goal of this project is to use dynamic environmental, behavioral, and historical features to predict future National Park crowd levels. These predictions can help travelers plan visits during less congested periods while also providing park management with insights to better anticipate peak visitation and allocate resources effectively.
+As an avid National Park fan who has visited 25 of the 63 U.S. National Parks, I have experienced firsthand how high visitation levels can impact the park experience through 1+ hour entrance station wait times, full campgrounds, crowded parking lots, and congested trails.
+
+This inspired me to explore whether machine learning could help travelers better plan visits during less congested periods while helping park managers anticipate future demand.
 
 This project builds a machine learning classification model that predicts monthly National Park crowd levels as:
 
@@ -52,6 +60,12 @@ The final dataset contains:
 - Approximately 30 engineered features
 
 The dataset remains computationally lightweight and can train on a standard laptop while allowing fast deployment through Streamlit.
+
+
+
+
+
+
 
 ---
 
