@@ -1,6 +1,7 @@
 
 # National Park Crowd & Traffic Optimization Dashboard
-A machine learning application that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
+<p align="center">A machine learning application that predicts monthly crowd levels across the 63 U.S. National Parks and helps travelers identify lower-congestion times to visit.
+</p>
 
 <p align="center">
   <img src="images/teton.JPG" width="700", height= "300"/>
@@ -11,8 +12,8 @@ A machine learning application that predicts monthly crowd levels across the 63 
 
 
 ## Project Preview
-Explore the deployed application, review the full analysis notebook, or watch a short walkthrough of the application.
-
+<p align="center">Explore the deployed application, review the full analysis notebook, or watch a short walkthrough of the application.
+</p>
 
 <p align="center">
   <a href="https://nationalparkcrowdpredictor.streamlit.app/">
