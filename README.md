@@ -1,10 +1,19 @@
+
 # National Park Crowd & Traffic Optimization Dashboard
 
-Visit the [DEPLOYED APP DEMO](https://nationalparkcrowdpredictor.streamlit.app/) in Streamlit
+A machine learning project that predicts monthly crowd levels across the 63 U.S. National Parks using historical visitation patterns, weather conditions, wildfire activity, economic indicators, and public interest signals.
 
 <p align="center">
-  <img src="images/teton.JPG" width="300"/>
+  <img src="images/teton.JPG" width="400"/>
+  <br>
+  <em>I took this sunrise photo of Grand Teton National Park in 2020.</em>
 </p>
+
+🚀 **View the deployed Streamlit application:**  
+https://nationalparkcrowdpredictor.streamlit.app/
+
+🚀 **View the Notebook file with full code:**
+[Jupyter Notebook](ProjectNotebook_.ipynb) file. 
 
 
 ##  The Business Problem
@@ -12,15 +21,12 @@ As an avid National Park fan, I have experienced first hand how high visitation 
 
 The goal of this project is to use dynamic environmental, behavioral, and historical features to predict future National Park crowd levels. These predictions can help travelers plan visits during less congested periods while also providing park management with insights to better anticipate peak visitation and allocate resources effectively.
 
-
 This project builds a machine learning classification model that predicts monthly National Park crowd levels as:
 
 - Low
 - Medium
 - High
 - Extreme
-
-The project focuses on the 63 U.S. National Parks and predicts monthly crowd tiers. It does not extend to daily forecasting or individual site capacity estimation.
 
 ---
 
