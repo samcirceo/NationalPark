@@ -20,7 +20,7 @@
     <img src="images/launchapp.svg" width="340" alt="Launch App">
   </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://nbviewer.org/github/samcirceo/NationalPark/blob/main/ProjectNotebook_.ipynb">
+  <a href="href="https://nbviewer.org/urls/raw.githubusercontent.com/samcirceo/NationalPark/main/ProjectNotebook_.ipynb"">
     <img src="images/notebook.svg" width="340" alt="View Notebook">
   </a>
 </p>
