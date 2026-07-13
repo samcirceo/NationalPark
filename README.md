@@ -20,7 +20,7 @@
     <img src="images/launchapp.svg" width="340" alt="Launch App">
   </a>
 &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://nbviewer.org/urls/raw.githubusercontent.com/samcirceo/NationalPark/main/ProjectNotebook_.ipynbs">
+  <a href="https://nbviewer.org/urls/raw.githubusercontent.com/samcirceo/NationalPark/main/ProjectNotebook_.ipynb">
     <img src="images/notebook.svg" width="340" alt="View Notebook">
   </a>
 </p>
@@ -368,7 +368,7 @@ XGBoost was selected as the final model because it:
 
 The final project was deployed as an interactive Streamlit application that allows users to explore predicted crowd levels across all 63 U.S. National Parks. Users can:
 
-### Explore Crowd Predictions
+#### Explore Crowd Predictions
 
 The interactive map displays predicted monthly crowd levels for each National Park using four crowd tiers:
 
@@ -377,7 +377,7 @@ The interactive map displays predicted monthly crowd levels for each National Pa
 - High
 - Extreme
 
-### Analyze Park Conditions
+#### Analyze Park Conditions
 
 For a selected park and month, users can view:
 
@@ -387,7 +387,7 @@ For a selected park and month, users can view:
 - Weather conditions
 - Nearby wildfire activity
 
-### Plan Lower-Crowd Visits
+#### Plan Lower-Crowd Visits
 
 When a selected month is predicted to have High or Extreme crowds, the application recommends alternative months with lower expected visitation to help travelers plan less congested trips.
 
