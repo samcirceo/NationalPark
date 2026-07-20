@@ -24,7 +24,9 @@ modelPipeline, labels, lookup_df = load_assets()
 
 st.title("National Park Crowd Predictor")
 st.write("Predict 2026 crowd levels across 63 U.S. National Parks using historical visitation, weather, wildfire activity, and Google Search Trends. Pick a National Park and month to travel in the dropdowns below:")
-
+st.markdown(
+    "📂 **View the project source code:** [GitHub Repository](https://github.com/samcirceo/NationalPark)"
+)
 
 
 # =====================================================================================================
@@ -46,8 +48,6 @@ rgb_colors = {0: [46, 204, 113, 200],  # Green (Low) + alpha opacity
               2: [230, 126, 34, 200],  # Orange (High)
               3: [231, 76, 60, 200] }  # Red (Extreme)
 tier_names = {0: "Low", 1: "Medium", 2: "High", 3: "Extreme"}
-
-
 
 # =====================================================================================================
 # Create function to create input features from user's selection
@@ -114,6 +114,13 @@ st.write(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    ---
+    📂 **Project Repository:** [GitHub](https://github.com/samcirceo/NationalPark)  
+    Built with Python, XGBoost, Streamlit, PyDeck, and data-driven prediction techniques.
+    """
+)
 with st.expander("About the Model"):
     st.markdown("""
     **Algorithm:** XGBoost Classifier
@@ -121,10 +128,22 @@ with st.expander("About the Model"):
     **Purpose:** Predicts monthly crowd levels (Low, Medium, High, or Extreme) for all 63 U.S. National Parks.
 
     **Features Used**
-    - Historical visitation patterns
-    - Weather
-    - Wildfire activity
-    - Google Search Trends
+    - Historical visitation patterns and seasonal trends
+    - Weather conditions (temperature, rainfall, snowfall)
+    - Wildfire activity near park locations
+    - Google Search Trends as a measure of public interest
+    - Lagged features to capture recent visitation and environmental patterns
+
+     **Model Approach**
+    - Data was transformed into a monthly park-level prediction dataset.
+    - Feature engineering was used to capture seasonal patterns, recent trends, and changing conditions.
+    - The XGBoost classification model predicts the expected crowd category for each park and month.
+    - Prediction confidence is calculated using the model's probability estimates.
+
+    **Model Performance**
+    - Weighted F1 Score: 0.73
+    - The model performance was evaluated using F1 score to balance precision and recall across the four crowd categories (Low, Medium, High, and Extreme).
+    - The evaluation reflects the model's ability to correctly classify crowd levels while accounting for differences between categories.
 
     **How Predictions Are Classified:**
     Crowd levels are based on each park's historical monthly visitation percentiles, not absolute visitor counts. This allows parks of different sizes to be compared relative to their own visitation history.
@@ -132,6 +151,14 @@ with st.expander("About the Model"):
     **Coverage**
     - 63 U.S. National Parks
     - Monthly predictions for 2026
+
+      **Tools & Technologies**
+    - Python
+    - XGBoost
+    - Streamlit
+    - PyDeck
+    - Pandas / NumPy
+    - Scikit-learn
     """)
 
 
